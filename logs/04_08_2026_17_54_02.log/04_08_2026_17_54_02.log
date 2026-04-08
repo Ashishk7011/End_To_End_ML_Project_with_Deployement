@@ -1,0 +1,6 @@
+[ 2026-04-08 17:54:05,934 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-04-08 17:54:05,938 ] 107 dagshub - INFO - Accessing as ashishk7011
+[ 2026-04-08 17:54:07,119 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/ashishk7011/End_To_End_ML_Project_with_Deployement "HTTP/1.1 200 OK"
+[ 2026-04-08 17:54:07,996 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-04-08 17:54:07,998 ] 107 dagshub - INFO - Initialized MLflow to track repo "ashishk7011/End_To_End_ML_Project_with_Deployement"
+[ 2026-04-08 17:54:08,001 ] 107 dagshub - INFO - Repository ashishk7011/End_To_End_ML_Project_with_Deployement initialized!

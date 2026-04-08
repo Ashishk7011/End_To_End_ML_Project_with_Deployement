@@ -26,9 +26,8 @@ from sklearn.ensemble import (
 import mlflow
 from urllib.parse import urlparse
 
-
-
-
+import dagshub
+dagshub.init(repo_owner='ashishk7011', repo_name='End_To_End_ML_Project_with_Deployement', mlflow=True)
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -38,8 +37,8 @@ class ModelTrainer:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
-    def track_mlflow(self,best_model,classificationmetric):
-        with mlflow.start_run():
+    def track_mlflow(self,best_model,classificationmetric,metric_name):
+        with mlflow.start_run(run_name=metric_name):
             f1_score=classificationmetric.f1_score
             precision_score=classificationmetric.precision_score
             recall_score=classificationmetric.recall_score
@@ -104,13 +103,13 @@ class ModelTrainer:
         classification_train_metric=get_classification_score(y_true=y_train,y_pred=y_train_pred)
         
         ## Track the experiements with mlflow
-        self.track_mlflow(best_model,classification_train_metric)
+        self.track_mlflow(best_model,classification_train_metric, "train_metric")
 
 
         y_test_pred=best_model.predict(x_test)
         classification_test_metric=get_classification_score(y_true=y_test,y_pred=y_test_pred)
 
-        self.track_mlflow(best_model,classification_test_metric)
+        self.track_mlflow(best_model,classification_test_metric, "test_metric")
 
         preprocessor = load_object(file_path=self.data_transformation_artifact.transformed_object_file_path)
             
