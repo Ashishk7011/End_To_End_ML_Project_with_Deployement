@@ -27,7 +27,17 @@ import mlflow
 from urllib.parse import urlparse
 
 import dagshub
-dagshub.init(repo_owner='ashishk7011', repo_name='End_To_End_ML_Project_with_Deployement', mlflow=True)
+# os.environ["DAGSHUB_TOKEN"] = "16dc9fb1cd3f01d0281dd581bd7744cdc9005c3f"
+# dagshub.init(repo_owner='ashishk7011', repo_name='End_To_End_ML_Project_with_Deployement', 
+#              mlflow=True)
+
+
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/ashishk7011/End_To_End_ML_Project_with_Deployement.mlflow/"
+os.environ["MLFLOW_TRACKING_USERNAME"]="ashishk7011"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="16dc9fb1cd3f01d0281dd581bd7744cdc9005c3f"
+
+
+
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -38,6 +48,8 @@ class ModelTrainer:
             raise NetworkSecurityException(e,sys)
         
     def track_mlflow(self,best_model,classificationmetric,metric_name):
+        mlflow.set_registry_uri("https://dagshub.com/ashishk7011/End_To_End_ML_Project_with_Deployement.mlflow/")
+        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         with mlflow.start_run(run_name=metric_name):
             f1_score=classificationmetric.f1_score
             precision_score=classificationmetric.precision_score
@@ -49,6 +61,15 @@ class ModelTrainer:
             mlflow.log_metric("precision",precision_score)
             mlflow.log_metric("recall_score",recall_score)
             mlflow.sklearn.log_model(best_model,"model")
+            if tracking_url_type_store != "file":
+
+                # Register the model
+                # There are other ways to use the Model Registry, which depends on the use case,
+                # please refer to the doc for more information:
+                # https://mlflow.org/docs/latest/model-registry.html#api-workflow
+                mlflow.sklearn.log_model(best_model, "model", registered_model_name="best_model")
+            else:
+                mlflow.sklearn.log_model(best_model, "model")
 
         
     def train_model(self,X_train,y_train,x_test,y_test):
