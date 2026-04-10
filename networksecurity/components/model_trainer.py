@@ -27,14 +27,11 @@ import mlflow
 from urllib.parse import urlparse
 
 import dagshub
-# os.environ["DAGSHUB_TOKEN"] = "16dc9fb1cd3f01d0281dd581bd7744cdc9005c3f"
-# dagshub.init(repo_owner='ashishk7011', repo_name='End_To_End_ML_Project_with_Deployement', 
-#              mlflow=True)
 
 
-os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/ashishk7011/End_To_End_ML_Project_with_Deployement.mlflow/"
+os.environ["MLFLOW_TRACKING_URI"]=""
 os.environ["MLFLOW_TRACKING_USERNAME"]="ashishk7011"
-os.environ["MLFLOW_TRACKING_PASSWORD"]="16dc9fb1cd3f01d0281dd581bd7744cdc9005c3f"
+os.environ["MLFLOW_TRACKING_PASSWORD"]=""
 
 
 
