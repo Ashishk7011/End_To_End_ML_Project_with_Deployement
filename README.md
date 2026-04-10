@@ -1,9 +1,7 @@
 ### Network Security Project For Phising Data
 This project is an end-to-end Machine Learning pipeline designed to detect phishing attempts using classification techniques. It follows a modular and production-grade architecture, integrating data ingestion, model training, experiment tracking, and deployment.
 
-```
 
-```
 ### ML App Overview:
 
 The goal of this project is to classify whether a given input (e.g., URL, email features, etc.) is phishing or legitimate using machine learning models.
