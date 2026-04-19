@@ -25,7 +25,7 @@ The system is built with:
 
 ## 🏗️ Project Architecture
 - The project follows a structured pipeline:
-```
+```bash
 Project
 │── config/              # Configuration files <br>
 │── components/          # ML pipeline components <br>
@@ -117,9 +117,9 @@ Project
 `cd phishing-detection-ml`
 
 2. Create Virtual Environment
-`python -m venv venv`
-`source venv/bin/activate`   # Linux/Mac <br>
-`venv\Scripts\activate`      # Windows <br>
+`python -m venv venv`  
+`source venv/bin/activate`   # Linux/Mac   
+`venv\Scripts\activate`      # Windows  
 
 3. Install Dependencies  
 `pip install -r requirements.txt`
