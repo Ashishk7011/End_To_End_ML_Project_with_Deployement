@@ -25,7 +25,7 @@ The system is built with:
 
 ## 🏗️ Project Architecture
 - The project follows a structured pipeline:
-
+```bash
 Project
 │── config/              # Configuration files <br>
 │── components/          # ML pipeline components <br>
@@ -36,7 +36,7 @@ Project
 │── Dockerfile           # Docker configuration <br>
 │── requirements.txt     # Dependencies <br>
 │── setup.py             # Package setup <br>
-
+```
 
 ### 1. :package: Environment & Dependency Setup
 - setup.py for packaging the project
