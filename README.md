@@ -25,7 +25,7 @@ The system is built with:
 
 ## 🏗️ Project Architecture
 - The project follows a structured pipeline:
-```bash
+```
 Project
 │── config/              # Configuration files <br>
 │── components/          # ML pipeline components <br>
