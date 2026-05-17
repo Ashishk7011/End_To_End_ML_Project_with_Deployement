@@ -1,11 +1,15 @@
 ### :computer: Network Security Project For Phising Data
 
-![GitHub stars](https://img.shields.io/github/stars/Ashishk7011/End-To-End-Data-Analysis-Project)
-![GitHub forks](https://img.shields.io/github/forks/Ashishk7011/End-To-End-Data-Analysis-Project)
+![GitHub stars](https://img.shields.io/github/stars/Ashishk7011/Network-Security-Project-For-Phishing-Data)
+![GitHub forks](https://img.shields.io/github/forks/Ashishk7011/Network-Security-Project-For-Phishing-Data)
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)
-![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
-![Status](https://img.shields.io/badge/Project-Completed-brightgreen)  
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-darkgreen)
+![AWS](https://img.shields.io/badge/Cloud-AWS-yellow)
+![Docker](https://img.shields.io/badge/Container-Docker-blue)
+![MLflow](https://img.shields.io/badge/Tracking-MLflow-purple)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
 This project is an end-to-end Machine Learning pipeline designed to detect phishing attempts using classification techniques. It follows a modular and production-grade architecture, integrating data ingestion, model training, experiment tracking, and deployment.
 
@@ -47,7 +51,7 @@ Project
 - Script: push_data.py
     - Uses .env file for secure MongoDB connection
     - Environment Variable:
-        - MONGO_DB_URL=your_mongodb_connection_string
+    `MONGO_DB_URL=your_mongodb_connection_string`
 
 ### 3. :arrows_clockwise: Modular Pipeline Design
 - Configuration-driven architecture
@@ -97,7 +101,7 @@ Project
 ### 9. :repeat: *CI/CD* Pipeline (GitHub Actions + AWS)
 - Implemented *CI/CD* using a <u>.yml</u> workflow file (GitHub Actions)
 - Automatically builds and pushes Docker images to *Amazon ECR* (Private Repository) after code changes
-- Configured self-hosted runner on *AWS EC2* for continuous deployment
+- Configured self-hosted runner on **AWS EC2** for continuous deployment
 -Enables:
     - Automated build → test → push → deploy cycle
     - Faster and consistent production updates
@@ -113,10 +117,10 @@ Project
 
 ### 10. :desktop_computer: Installation & Setup
 1. Clone Repository  
-`git clone https://github.com/your-username/phishing-detection-ml.git`
+`git clone https://github.com/your-username/phishing-detection-ml.git`  
 `cd phishing-detection-ml`
 
-2. Create Virtual Environment
+2. Create Virtual Environment  
 `python -m venv venv`  
 `source venv/bin/activate`   # Linux/Mac   
 `venv\Scripts\activate`      # Windows  
@@ -128,10 +132,10 @@ Project
 
 - Create .env file:
 
-- MONGO_DB_URL=your_connection_string
+`MONGO_DB_URL=your_connection_string`
 
 # Run with Docker  
-`docker build -t mlapp .`
+`docker build -t mlapp .`  
 `docker run -p 8000:8000 mlapp`
 
 # API Usage  
@@ -151,12 +155,12 @@ Project
 
 ##### optional
 
-`sudo apt-get update -y`
+`sudo apt-get update -y`  
 `sudo apt-get upgrade`
 
-#### required
+#### *required*
 
-`curl -fsSL https://get.docker.com -o get-docker.sh`
-`sudo sh get-docker.sh`
-`sudo usermod -aG docker ubuntu`
-`newgrp docker`
+`curl -fsSL https://get.docker.com -o get-docker.sh`  
+`sudo sh get-docker.sh`  
+`sudo usermod -aG docker ubuntu`  
+`newgrp docker`  
