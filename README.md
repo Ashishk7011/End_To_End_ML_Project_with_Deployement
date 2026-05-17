@@ -1,7 +1,7 @@
 ### :computer: Network Security Project For Phising Data
 
-![GitHub stars](https://img.shields.io/github/stars/Ashishk7011/Network-Security-Project-For-Phishing-Data)
-![GitHub forks](https://img.shields.io/github/forks/Ashishk7011/Network-Security-Project-For-Phishing-Data)
+![GitHub stars](https://img.shields.io/github/stars/Ashishk7011/End_To_End_ML_Project_with_Deployement)
+![GitHub forks](https://img.shields.io/github/forks/Ashishk7011/End_To_End_ML_Project_with_Deployement)
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
 ![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
